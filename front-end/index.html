@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Task</title>
+</head>
+<body class="bg-slate-200">
+    <div class="max-w-screen-xl my-0 mx-auto w-11/12">
+        <h1 class="text-center text-2xl mb-3 p-4">Task Mangement Dashbord</h1>
+        <a href="./src/create-task.html">
+            <button class="bg-slate-800 text-white p-2 px-7 rounded-full cursor-pointer">Create Task</button>
+        </a>
+        <div class="text-green-700 p-3" id="message">Task added succesfully!</div>
+
+        <form action="" method="post" class="p-5 hidden" id="index-update">
+            <fieldset class="border flex flex-col border-slate-800 p-4 gap-y-2">
+                <label class="font-bold" for="name">
+                    Task name
+                </label> 
+                <input class="border border-black bg-white" type="text" name="name" id="name">
+                
+                <label for="description" class="font-bold">
+                    Description
+                </label> 
+                <textarea class="border border-black h-16 bg-white" name="description" id="description"></textarea>
+
+                <label for="date" class="font-bold">
+                    Due Date
+                </label> 
+                <input type="date" class="border w-36 border-black bg-white" name="due_date" id="date">
+                <label for="priority" class="font-bold">
+                    Priority
+                </label> 
+                <select name="priority" id="priority" class="border w-24 border-black bg-white">
+                    <option value="high">High</option>
+                    <option value="middle">middle</option>
+                    <option value="low">low</option>
+                </select>
+               <input type="submit" class="bg-blue-800 text-white p-2 px-7 rounded-full cursor-pointer mb-3 mt-4" value="Update">
+            </fieldset>
+        </form>
+
+
+        <main class="my-0 mx-auto">
+            <table class="w-full rounded-full border border-slate-900 border-collapse" id="table">
+                <tr class="bg-slate-600 text-slate-200 border border-slate-200">
+                    <th class="border border-slate-200 p-1 w-16">No.</th>
+                    <th class="border border-slate-200 w-36">Task Name</th>
+                    <th class="border border-slate-200 w-64">Description</th>
+                    <th class="border border-slate-200 w-32">Due Date</th>
+                    <th class="border border-slate-200 w-28">Proirity</th>
+                    <th class="border border-slate-200 w-60">Actions</th>
+                </tr>
+
+                <!-- <tr>
+                    <td class="align-top text-center border border-slate-900">1</td>
+                    <td class="text-left pl-4 align-top border border-slate-900">Serve Dinner Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quia?</td>
+                    <td class="align-top  pl-4 border border-slate-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, esse ipsam mollitia quisquam debitis tempora aut repellat quas beatae, minus magni laborum aperiam, repellendus molestias quos voluptas autem exercitationem praesentium!</td>
+                    <td class="align-top text-center border border-slate-900">2022-23-45</td>
+                    <td class="text-red-600 align-top text-center border border-slate-900"> high </td>
+                    <td class=" text-center border border-slate-900">
+                        <a href="#">
+                            <button class="bg-green-400 px-6 rounded-xl text-slate-100 mt-2 pb-1">Complete</button> 
+                        </a> 
+                        <a href="#" id="index-update-btn">
+                            <button class="bg-blue-400 px-6 rounded-full text-slate-100 mt-2 pb-1" >Update</button>
+                        </a>
+                        <a href="./src/detail.html">
+                            <button class="bg-slate-900 px-6 rounded-full text-slate-100 mt-2 pb-1">Detail</button>
+                        </a>
+                        
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="align-top text-center border border-slate-900">2</td>
+                    <td class="text-left pl-4 align-top border border-slate-900">Serve Dinner Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quia?</td>
+                    <td class="align-top  pl-4 border border-slate-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, esse ipsam mollitia quisquam debitis tempora aut repellat quas beatae, minus magni laborum aperiam, repellendus molestias quos voluptas autem exercitationem praesentium!</td>
+                    <td class="align-top text-center border border-slate-900">2022-23-45</td>
+                    <td class="text-red-600 align-top text-center border border-slate-900"> high </td>
+                    <td class=" text-center border border-slate-900">
+                        <a href="#">
+                            <button class="bg-green-400 px-6 rounded-xl text-slate-100 mt-2 pb-1">Complete</button> 
+                        </a> 
+                        <a href="#">
+                            <button class="bg-blue-400 px-6 rounded-full text-slate-100 mt-2 pb-1" id="index-update-btn">Update</button>
+                        </a>
+                        <a href="./src/detail.html">
+                            <button class="bg-slate-900 px-6 rounded-full text-slate-100 mt-2 pb-1">Detail</button>
+                        </a>
+                    </td>
+                </tr> -->
+            </table>
+        </main>
+    </div>
+    <script src="./src/index.js"></script>
+</body>
+</html>

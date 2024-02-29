@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+    <div class="max-w-screen-xl my-0 mx-auto w-11/12">
+        <h1 class="text-center text-2xl mb-3 p-4">Task Mangement Dashbord</h1>
+        <a href="../index.html">
+            <button class="bg-slate-800 text-white p-2 px-7 rounded-full cursor-pointer mb-3" id="back">Back to tasks</button>
+        </a>
+
+        
+        <main class="my-0 mx-auto" id="main-container">
+            <div class="grid grid-cols-1 my-4 gap-y-4" id="detail-page">
+                <div class="flex">
+                    <div class="font-bold w-1/6">Task Name</div>
+                    <div class="flex-1" id="task-name"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, tempora? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum quisquam voluptatum laboriosam minus, necessitatibus fugit minima ipsa provident omnis illo!</div>
+                </div>
+
+                <div class="flex">
+                    <div class="font-bold w-1/6">Description</div>
+                    <div class="flex-1" id="task-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, tempore perspiciatis rerum est soluta ullam reprehenderit nam quis repellendus dolores.</div>
+                </div>
+                <div class="flex">
+                    <div class="font-bold w-1/6">Priority</div>
+                    <div class="flex-1" id="task-priority">4509-45-89</div>
+                </div>
+                <div class="flex">
+                    <div class="font-bold w-1/6">Due Date</div>
+                    <div class="flex-1" id="due-date">Lorem, ipsum.
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="font-bold w-1/6">Created at</div>
+                    <div class="flex-1" id="created-at"></div>
+                </div>
+                <div class="flex">
+                    <div class="font-bold w-1/6">Updated at</div>
+                    <div class="flex-1" id="updated-at"></div>
+                </div>
+                <div class="flex">
+                    <div class="font-bold w-1/6">Actions</div>
+                    <div>
+                        <a href="#">
+                            <button class="bg-green-400 px-6 rounded-xl text-slate-100 mt-2 pb-1">Complete</button> 
+                        </a> 
+                        <div class="" id="detail-update">
+                            <button class="bg-blue-400 px-6 rounded-full text-slate-100 mt-2 pb-1">Update</button>
+                        </div>
+                        <a href="#">
+                            <button class="bg-red-400 px-6 rounded-full text-slate-100 mt-2 pb-1">Delete</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <form action="http://127.0.0.1:8000/api/tasks" method="post" class="p-5 hidden" id="detail-form postForm" name="formValue">
+                <fieldset class="border flex flex-col border-slate-800 p-4 gap-y-2">
+                    <label class="font-bold" for="name">
+                        Task name
+                    </label> 
+                    <input class="border border-black bg-white" type="text" name="name" id="name">
+                    
+                    <label for="description" class="font-bold">
+                        Description
+                    </label> 
+                    <textarea class="border border-black h-16 bg-white" name="description" id="description"></textarea>
+
+                    <label for="date" class="font-bold">
+                        Due Date
+                    </label> 
+                    <input type="date" class="border w-36 border-black bg-white" name="due_date" id="date">
+                    <label for="priority" class="font-bold">
+                        Priority
+                    </label> 
+                    <select name="priority" id="priority" class="border w-24 border-black bg-white">
+                        <option value="high">High</option>
+                        <option value="middle">middle</option>
+                        <option value="low">low</option>
+                    </select>
+                   <input type="submit" class="bg-blue-800 text-white p-2 px-7 rounded-full cursor-pointer mb-3 mt-4" value="Update">
+                </fieldset>
+            </form> -->
+
+        </main>
+    </div>
+    <script src="./detail.js"></script>
+</body>
+</html>

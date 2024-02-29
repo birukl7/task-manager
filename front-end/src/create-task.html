@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+    <div class="max-w-screen-xl my-0 mx-auto w-11/12">
+        <h1 class="text-center text-2xl mb-3 p-4">Task Mangement Dashbord</h1>
+        <a href="../index.html">
+            <button class="bg-slate-800 text-white p-2 px-7 rounded-full cursor-pointer mb-3" id="back">Back to tasks</button>
+        </a>
+
+        
+        <main class="my-0 mx-auto">
+            <form action="http://127.0.0.1:8000/api/tasks" method="post" id="postForm" class="p-5" id="detail-form">
+                <fieldset class="border flex flex-col border-slate-800 p-4 gap-y-2">
+                    <label class="font-bold" for="name">
+                        Task name
+                    </label> 
+                    <input class="border border-black bg-white" type="text" name="name" id="name" required>
+                    
+                    <label for="description" class="font-bold">
+                        Description
+                    </label> 
+                    <textarea class="border border-black h-16 bg-white" name="description" id="description"></textarea>
+
+                    <label for="date" class="font-bold">
+                        Due Date
+                    </label> 
+                    <input type="date" class="border w-36 border-black bg-white" name="due_date" id="date">
+                    <label for="priority" class="font-bold">
+                        Priority
+                    </label> 
+                    <select name="priority" id="priority" class="border w-24 border-black bg-white">
+                        <option value="high">High</option>
+                        <option value="middle">middle</option>
+                        <option value="low">low</option>
+                    </select>
+                   <input type="submit" class="bg-slate-800 text-white p-2 px-7 rounded-full cursor-pointer mb-3 mt-4" value="Update">
+                </fieldset>
+            </form>
+
+            
+        </main>
+    </div>
+    <script src="./create.js"></script>
+</body>
+</html>
