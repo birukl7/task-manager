@@ -1,14 +1,17 @@
-const indexUpdate = document.querySelector('#index-update')
-const indexButton = document.querySelectorAll('#index-update-btn')
+
 const table = document.querySelector('#table')
 const APIurl = 'http://127.0.0.1:8000/api/tasks'
 
-
-indexButton.forEach((btn)=>{
+setTimeout(()=>{
+  const indexUpdate = document.querySelector('#index-update')
+const indexButton = document.querySelectorAll('#index-update-btn')
+  indexButton.forEach((btn)=>{
     btn.addEventListener('click',()=>{
         indexUpdate.classList.toggle('hidden');
     })
 })
+},3000)
+
 
 let innerHtmlText = '';
 async function fetchData() {
@@ -90,5 +93,28 @@ async function fetchData() {
   }, 2000)
 
 
-  
+  form.addEventListener('submit', function(event) {
+    // event.preventDefault(); // Prevent the default form submission
+     const formData = new FormData(this);
+ 
+     // Send the form data to the server using fetch
+     fetch(`http://127.0.0.1:8000/api/tasks/${idNo}`, {
+         method: 'PUT',
+         body: formData
+     })
+     .then(response => {
+         if (!response.ok) {
+             throw new Error('Network response was not ok');
+         }
+         return response.json();
+     })
+     .then(data => {
+         console.log('Update successful:', data);
+         // Optionally, you can redirect the user or show a success message
+     })
+     .catch(error => {
+         console.error('Error:', error);
+         // Optionally, you can display an error message to the user
+     });
+ }); 
 
